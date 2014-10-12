@@ -1,0 +1,112 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.header {
+	padding-top: 5px;
+}
+
+.leftArea {
+	position: absolute;
+	left: 3%;
+	top: 20px;
+	bottom: 20px;
+	width: 10%;
+}
+
+.mainArea {
+	position: absolute;
+	top: 70px;
+	bottom: 20px;
+	left:30%;
+	width:30%;
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	border:solid 1px #CCCCCC;
+	overflow-y: scroll;
+}
+
+.rightArea {
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	left:62%;
+	width:35%;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-top: 0px;
+}
+
+li a { 
+	text-decoration:none;
+	display: block;
+	color: #000000;
+	border-bottom:solid 1px #CCCCCC;
+	padding: 8px;
+}
+
+li a:hover {
+	background-color: #DCDCDC;
+	color: #FFFFFF;
+}
+
+input, textarea {
+	border:1px solid #ccc;
+	min-height:30px;
+	outline: none;
+	margin-bottom:15px;
+	margin-top:5px;
+	width:280px;
+}
+
+textarea {
+	width: 460px;
+}
+
+label {
+	display:block;
+}
+
+button {
+	padding:6px;
+}
+
+
+#searchKey {
+	width:160px;
+}
+
+.info, .success, .warning, .error, .validation {
+	border: 1px solid;
+	margin: 10px 0px;
+	padding:15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	width: 380px;
+}
+
+.info {
+	color: #00529B;
+	background-color: #BDE5F8;
+	background-image: url('img/info.png');
+}
+.success {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+	background-image:url('img/success.png');
+}
+.warning {
+	color: #9F6000;
+	background-color: #FEEFB3;
+	background-image: url('img/warning.png');
+}
+.error {
+	color: #D8000C;
+	background-color: #FFBABA;
+	background-image: url('img/error.png');
+}

@@ -1,0 +1,22 @@
+{% extends 'layout.twig' %}
+
+{% block title info.name %}
+{% block description info.description %}
+{% block author info.author %}
+
+{% block content %}
+    <div class="reveal">
+        <div class="slides">
+            {% for slide in slides %}
+                    {{ _self.slides(slide) }}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% macro slides(slide) %}
+    <section>
+        <h2> {{ slide.title }} </h2>
+        <p> {{ slide.text|raw }} </p>
+    </section>
+{% endmacro %}

@@ -1,0 +1,8 @@
+{% extends 'layout.twig' %}
+
+{% block title 'Error' %}
+    
+{% block content %}
+<h2> Error </h2>
+<p>  {{ mensaje|default('Se ha producido un error grave en el servidor.') }} </p>
+{% endblock %}

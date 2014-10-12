@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Slides</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/jquery-te.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    </head>
+
+    <body>
+
+    <div class="leftArea">
+        <form id="slideFormInfo">
+            <fieldset>
+        	<legend>Information:</legend>
+                <label>Name:</label>
+                <input type="text" id="name" name="name" required>
+                        
+                <label>Description:</label>
+                <input type="text" id="description" name="description" required>
+                
+                <label>Author:</label>
+                <input type="text" id="author" name="author" required>
+                
+                 <div style="clear: both"></div>
+                
+                <button id="btnSaveInfo">Save</button>
+            </fieldset>
+        </form>
+    </div>
+
+    
+    <div class="mainArea">
+	<ul id="slideList"></ul>
+    </div>
+
+    <div class="rightArea">
+        <input type="text" id="searchKey"/>
+        <button id="btnSearch">Search</button>
+        <button id="btnAdd">New Slide</button>
+        <div id="message"></div>
+        <form id="slideForm">
+            <fieldset>
+                <legend>Slide:</legend>
+                <label>Id:</label>
+                <input id="slideId" name="id" type="text" disabled />
+    
+                <label>Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label>Text:</label>
+                <textarea id="text" name="text"></textarea>
+                <div id="message"></div>
+    
+                <div style="clear: both"></div>
+                
+                <button id="btnSave">Save</button>
+                <button id="btnDelete">Delete</button>
+            </fieldset>
+        </form>
+    </div>
+	
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<script src="js/jquery-te.min.js"></script>
+	<script src="js/admin.js"></script>
+
+    </body>
+</html>

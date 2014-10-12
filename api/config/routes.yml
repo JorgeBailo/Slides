@@ -1,0 +1,39 @@
+getAllSlides:
+  path: /slides
+  defaults: { _controller: 'Slides\SlidesController::getAllSlidesAction' }
+  methods:  [GET]
+
+getSlideById:
+  path: /slides/{id}
+  defaults: { _controller: 'Slides\SlidesController::getSlideAction' }
+  methods:  [GET]
+  
+getSlideByName:
+  path: /slides/search/{name}
+  defaults: { _controller: 'Slides\SlidesController::getSlidesSearchAction' }
+  methods:  [GET]
+  
+deleteSlide:
+  path: /slides/{id}
+  defaults: { _controller: 'Slides\SlidesController::deleteSlideAction' }
+  methods:  [DELETE]
+
+addSlide:
+  path: /slides
+  defaults: { _controller: 'Slides\SlidesController::addSlideAction' }
+  methods:  [POST]
+
+editSlide:
+  path: /slides/{id}
+  defaults: { _controller: 'Slides\SlidesController::editSlideAction' }
+  methods:  [PUT]
+
+getInfo:
+  path: /slides/info/
+  defaults: { _controller: 'Slides\SlidesController::getInfoAction' }
+  methods:  [GET]
+
+editInfo:
+  path: /slides/editinfo/
+  defaults: { _controller: 'Slides\SlidesController::editInfoAction' }
+  methods:  [PUT]

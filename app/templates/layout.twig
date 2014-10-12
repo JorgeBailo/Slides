@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+	<title>{% block title '' %}</title>
+        <meta name="description" content="{% block description '' %}">
+	<meta name="author" content="{% block author '' %}">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="{{ app.request.basepath }}/css/reveal.min.css">
+        <link rel="stylesheet" href="{{ app.request.basepath }}/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="{{ app.request.basepath }}/lib/css/zenburn.css">
+
+        <!--[if lt IE 9] -->
+        <script src="{{ app.request.basepath }}/lib/js/html5shiv.js"></script>
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+        
+        <script src="{{ app.request.basepath }}/lib/js/head.min.js"></script>
+	<script src="{{ app.request.basepath }}/js/reveal.min.js"></script>
+
+        <script>
+
+        Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme,
+                transition: Reveal.getQueryHash().transition || 'default',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                        { src: '{{ app.request.basepath }}/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                        { src: '{{ app.request.basepath }}/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: '{{ app.request.basepath }}/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: '{{ app.request.basepath }}/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                        { src: '{{ app.request.basepath }}/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                        { src: '{{ app.request.basepath }}/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+        });
+
+        </script>
+    </body>
+</html>

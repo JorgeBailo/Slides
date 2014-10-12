@@ -1,0 +1,10 @@
+# Ignore Silex
+/api/phpunit.xml
+/api/vendor
+/api/build
+/api/composer.lock
+/app/phpunit.xml
+/app/vendor
+/app/build
+/app/composer.lock
+*.komodoproject
